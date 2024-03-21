@@ -1,3 +1,8 @@
+# NOME: Carlos Henrique Lucena Barros					RA: 22.01211-7
+# NOME: Leonardo Cazotto Stuber						    RA: 22.01290-7
+# NOME: Mateus Capaldo Martins						    RA: 22.01082-3
+# NOME: Othavio Carvalho Losovoi						RA: 22.01545-0
+
 import sys
 
 def validador():
