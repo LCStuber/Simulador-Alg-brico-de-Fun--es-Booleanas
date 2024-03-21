@@ -1,3 +1,21 @@
+import sys
+
+def validador():
+    caracteresVálidos = ["a" , "b" , "c" , "d" , "e" , "f" , "g" , "h" , "i" , "j" , "k" , "l" , "m" , "n" , "o" , "p" , "q" , "r" , "s" , "t" , "u" , "v" , "w" , "x" , "y" , "z","A" , "B" , "C" , "D" , "E" , "F" , "G" , "H" , "I" , "J" , "K" , "L" , "M" , "N" , "O" , "P" , "Q" , "R" , "S" , "T" , "U" , "V" , "W" , "X" , "Y" , "Z", "~", "+", "*",]
+    exp = str(input())
+    for letra in exp:
+        if letra not in caracteresVálidos:
+            sys.tracebacklimit=0
+            raise TypeError(f'''ERRO! A expressão algébrica digitada está incorreta, pois contém o caractere não válido "{letra}"!
+Os caracteres válidos para o uso do programa são:
+- Qualquer letra maiúscula e/ou minúscula dentro do alfabeto americano;
+- "~" usado antes de uma letra (como "~A") para indicar negação ("não A");
+- "+" usado para a operação "ou";
+- "*" usado para a operação "e".''')
+
+    return exp
+
+
 def expressao_espaco(expressao):
     nova_expressao = ""
     for e in expressao:
@@ -57,7 +75,7 @@ if __name__ == "__main__":
     print("-"*30)
     print("Digite a expressão lógica:")
 
-    expressao = str(input())
+    expressao = validador()
 
     expressao = expressao_espaco(expressao)
 
